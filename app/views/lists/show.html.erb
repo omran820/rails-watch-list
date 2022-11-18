@@ -1,0 +1,16 @@
+<h3>welcome to bookmarkpage</h3>
+
+
+<%= @list.name %>
+
+
+<%= @list.bookmarks %> <p>Array</p>
+
+<%@list.bookmarks.each do |bookmark| %>
+  <%= bookmark.movie.title %>
+  <%= bookmark.comment %>
+  <%= bookmark.list.name %>
+<% end %>
+
+
+<%= link_to "Add a movie list", new_list_bookmark_path(@list), class:"btn btn-primary" %>
